@@ -8,20 +8,19 @@ def classify_triangle(a, b, c):
         s1 = a
         s2 = c
     else:
-        hyp = c 
+        hyp = c
         s1 = a
         s2 = b
-    if (s1**2 + s2**2 == hyp**2):
+    if s1**2 + s2**2 == hyp**2:
         if (a == b and b == c):
+            # not possible
             return "Right Equilateral"
         elif (a == b or b == c or a == c):
             return "Right Isosceles"
-        else:
-            return "Right Scalene"
+        return "Right Scalene"
     else:
         if (a == b and b == c):
             return "Equilateral"
         elif (a == b or b == c or a == c):
             return "Isosceles"
-        else:
-            return "Scalene"
+        return "Scalene"
